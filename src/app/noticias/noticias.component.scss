@@ -1,0 +1,32 @@
+strong{
+    font-size: 15px;
+    text-align: center;
+}
+li img{
+    margin: 30px;
+    display: flex;
+    width: 100px;
+	height: 140px;
+    text-align: center;
+    padding: 10px;
+}
+li{
+    margin: 6px;
+    background-color: rgba(237, 241, 236, 0.459);
+    padding: 6px;
+}
+p{
+    font-size: 10px;
+    font-family: 'Merriweather', serif,rgb(32, 32, 32);
+    text-align: left;
+    width: 20vw;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    width: 100%;
+    justify-content: center;
+    font-size: 12px;
+}

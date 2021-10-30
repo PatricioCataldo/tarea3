@@ -1,0 +1,13 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(35, 36, 56);
+    justify-content: center;
+}
+li a{
+    font-size: 12px;
+    font-family: 'Merriweather', serif,white;
+    margin: 5px;
+    background-color: rgb(49, 49, 66);
+}

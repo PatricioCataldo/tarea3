@@ -1,0 +1,41 @@
+<div *ngIf="!activarMsj">
+<form [formGroup]="formulario1" (ngSubmit)="validacion()" novalidate>
+    <ul>
+        <li>
+            <label>Nombre Completo:</label><br>
+            <input type="text" formControlName="nombre" placeholder="Escriba su nombre...">
+            <div *ngIf="formulario1.controls['nombre'].invalid && formulario1.controls['nombre'].dirty " class="alert alert-danger">Nombre requerido</div>
+        </li>
+        <li>
+            <label>Teléfono:</label><br>
+            <input type="tel" formControlName="telefono" placeholder="Escriba su número telefónico...">
+            <div *ngIf="formulario1.controls['telefono'].invalid && formulario1.controls['telefono'].dirty "  class="alert alert-danger">Número requerido</div>
+        </li>
+        <li>
+            <label>Correo Electrónico:</label><br>
+            <input type="email" formControlName="email" placeholder="Escriba su correo...">
+            <div *ngIf="formulario1.controls['email'].invalid && formulario1.controls['email'].dirty "  class="alert alert-danger">Correo requerido</div>
+        </li>
+        <li>
+            <label>Dirigido a:</label><br>
+            <select formControlName="objetivo">
+                <option selected>Elija...</option>
+                <option>Contenidos</option>
+                <option>Publicidad</option>
+                <option>Sugerencias</option>
+                <option>Subscripciones Digitales</option>
+            </select>
+            <div *ngIf="formulario1.controls['objetivo'].invalid && formulario1.controls['objetivo'].dirty "  class="alert alert-danger">Elija una opción válida</div>
+        </li>
+        <li>
+            <label>Mensaje:</label><br>
+            <textarea cols="50" rows="12" formControlName="mensaje" placeholder="Escriba su mensaje..."></textarea>
+            <div *ngIf="formulario1.controls['mensaje'].invalid && formulario1.controls['mensaje'].dirty"  class="alert alert-danger">Mensaje requerido</div>
+        </li>
+        <li>
+            <button type="submit" formControlName="boton" class="btn btn-primary" [disabled]="!formulario1.valid">Enviar Mensaje</button>
+        </li>
+    </ul>
+</form>
+</div>
+<div *ngIf="activarMsj" id="despedida"><b>Gracias por su Mensaje!</b></div>

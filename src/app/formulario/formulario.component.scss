@@ -1,0 +1,21 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    flex-direction: column;
+}
+li{
+    margin: 10px;
+    font-family: 'Merriweather', serif
+}
+li input,select{
+    width: 220px;
+    height: 24px;
+
+}
+b{
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    margin: 10px;
+}
